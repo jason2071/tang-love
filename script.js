@@ -19,11 +19,11 @@ noButton.addEventListener('click', function () {
   // ตรวจสอบขนาดหน้าจอเพื่อกำหนดทิศทางการเคลื่อนที่ของปุ่ม No
   if (window.innerWidth <= 600) {
     // บน mobile: เลื่อนลง
-    let noOffset = clickCount * 35;
+    let noOffset = clickCount * 25;
     noButton.style.transform = `translateY(${noOffset}px)`;
   } else {
     // บน desktop: เลื่อนไปทางขวา
-    let noOffset = clickCount * 50;
+    let noOffset = clickCount * 40;
     noButton.style.transform = `translateX(${noOffset}px)`;
   }
 
@@ -35,6 +35,10 @@ noButton.addEventListener('click', function () {
   // ข้อความของปุ่ม No ที่เปลี่ยนไป (เปลี่ยน 5 ครั้งแรก)
   if (clickCount <= 5) {
     noButton.innerText = noTexts[clickCount - 1];
+  }
+
+  if (clickCount >= 5) {
+    noButton.style.width = '100px';
   }
 
   // รูปภาพที่เปลี่ยนไป (เปลี่ยน 5 ครั้งแรก)
