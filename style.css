@@ -1,63 +1,83 @@
 body {
-    background-color: #f1d5da; /* สีชมพูอ่อน */
-    text-align: center;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  background-color: #f1d5da; /* สีชมพูอ่อน */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* จัดเนื้อหาของหน้าให้อยู่ตรงกลาง */
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ปรับขนาดรูปภาพให้เหมาะสม */
 #mainImage {
-    width: 200px;
-    transition: all 0.3s ease;
+  width: 200px;
+  transition: all 0.3s ease;
 }
 
 /* ข้อความ */
 h1 {
-    font-size: 28px;
-    color: #68495b;
+  font-size: 28px;
+  color: #68495b;
 }
 
 /* สไตล์ปุ่ม */
 button {
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    transition: all 0.3s ease;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.3s ease;
 }
 
 #yes {
-    background-color: #d4818e; /* สีชมพู */
-    color: white;
+  background-color: #d4818e; /* สีชมพู */
+  color: white;
 }
 
 #no {
-    background-color: #6784b1; /* สีน้ำเงิน */
-    color: white;
-    position: relative;
+  background-color: #6784b1; /* สีน้ำเงิน */
+  color: white;
+  position: relative;
 }
 
 /* Yes เต็มหน้าจอ */
 .yes-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ffdae0; /* สีชมพู */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffdae0; /* สีชมพู */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  #mainImage {
+    width: 150px;
+  }
 }

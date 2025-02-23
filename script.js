@@ -16,11 +16,18 @@ noButton.addEventListener('click', function () {
   let yesSize = 1 + clickCount * 1.2;
   yesButton.style.transform = `scale(${yesSize})`;
 
-  // ทำให้ปุ่ม No เคลื่อนที่ไปทางขวา 100px ทุกครั้งที่คลิก
-  let noOffset = clickCount * 50;
-  noButton.style.transform = `translateX(${noOffset}px)`;
+  // ตรวจสอบขนาดหน้าจอเพื่อกำหนดทิศทางการเคลื่อนที่ของปุ่ม No
+  if (window.innerWidth <= 600) {
+    // บน mobile: เลื่อนลง
+    let noOffset = clickCount * 35;
+    noButton.style.transform = `translateY(${noOffset}px)`;
+  } else {
+    // บน desktop: เลื่อนไปทางขวา
+    let noOffset = clickCount * 50;
+    noButton.style.transform = `translateX(${noOffset}px)`;
+  }
 
-  // **ใหม่: ทำให้รูปภาพและข้อความเลื่อนขึ้น**
+  // ใหม่: ทำให้รูปภาพและข้อความเลื่อนขึ้น
   let moveUp = clickCount * 25; // เลื่อนขึ้นครั้งละ 20px
   mainImage.style.transform = `translateY(-${moveUp}px)`;
   questionText.style.transform = `translateY(-${moveUp}px)`;
